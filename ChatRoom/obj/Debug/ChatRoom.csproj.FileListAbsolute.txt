@@ -1,0 +1,13 @@
+C:\Users\Hajar\Desktop\S4\tech.NET\ChatRoom\ChatRoom\obj\Debug\ChatRoom.csproj.AssemblyReference.cache
+C:\Users\Hajar\Desktop\S4\tech.NET\ChatRoom\ChatRoom\obj\Debug\ChatRoom.Auth.resources
+C:\Users\Hajar\Desktop\S4\tech.NET\ChatRoom\ChatRoom\obj\Debug\ChatRoom.Properties.Resources.resources
+C:\Users\Hajar\Desktop\S4\tech.NET\ChatRoom\ChatRoom\obj\Debug\ChatRoom.Room.resources
+C:\Users\Hajar\Desktop\S4\tech.NET\ChatRoom\ChatRoom\obj\Debug\ChatRoom.csproj.GenerateResource.cache
+C:\Users\Hajar\Desktop\S4\tech.NET\ChatRoom\ChatRoom\obj\Debug\ChatRoom.csproj.CoreCompileInputs.cache
+C:\Users\Hajar\Desktop\S4\tech.NET\ChatRoom\ChatRoom\bin\Debug\ChatRoom.exe.config
+C:\Users\Hajar\Desktop\S4\tech.NET\ChatRoom\ChatRoom\bin\Debug\ChatRoom.exe
+C:\Users\Hajar\Desktop\S4\tech.NET\ChatRoom\ChatRoom\bin\Debug\ChatRoom.pdb
+C:\Users\Hajar\Desktop\S4\tech.NET\ChatRoom\ChatRoom\bin\Debug\MySql.Data.dll
+C:\Users\Hajar\Desktop\S4\tech.NET\ChatRoom\ChatRoom\obj\Debug\ChatRoom.csproj.CopyComplete
+C:\Users\Hajar\Desktop\S4\tech.NET\ChatRoom\ChatRoom\obj\Debug\ChatRoom.exe
+C:\Users\Hajar\Desktop\S4\tech.NET\ChatRoom\ChatRoom\obj\Debug\ChatRoom.pdb
