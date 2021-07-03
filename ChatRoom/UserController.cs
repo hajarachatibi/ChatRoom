@@ -7,9 +7,12 @@ using System.Threading.Tasks;
 
 namespace ChatRoom
 {
+    //Classe UserController pour les fonctions CRUD de la classe User
     class UserController
     {
         private static MySqlCommand cmd;
+        //Fonction pour ajouter un nouveau utilisateur si il n'existe pas dans la base de donnees 
+        //Sinon c'est a dire si il existe deja dans BD alors on le rend active
         public static void Join(string username)
         {
             using (MySqlConnection connection = DB.Connect())
@@ -35,6 +38,7 @@ namespace ChatRoom
             }
         }
 
+        //Fonction: si un utilisateur quitte la discussion on le rend desactive
         public static void Leave(string username)
         {
             using (MySqlConnection connection = DB.Connect())
@@ -44,6 +48,8 @@ namespace ChatRoom
                 cmd.ExecuteNonQuery();
             }
         }
+
+        //Fonction pour lister tous les utilisateurs connectes (actives)
 
         public static List<User> getActiveUsers()
         {
@@ -62,6 +68,8 @@ namespace ChatRoom
             }
             return users;
         }
+
+        // Fonction pour obtenir user ID en offrant username
         public static int GetID(string username)
         {
 
@@ -79,6 +87,8 @@ namespace ChatRoom
             }
             return 0;
         }
+
+        //Fonction pour obtenir l'utilisateur en offrant user ID
         public static User getUserById(int id)
         {
             User user = null;
@@ -93,8 +103,6 @@ namespace ChatRoom
                 }
                 dr.Close();
             }
-
-
             return user;
         }
     }

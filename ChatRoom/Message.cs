@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChatRoom
 {
+    //Classe Message pour la gestion des messages
     class Message
     {
         public int id { get; set; }

@@ -19,6 +19,7 @@ namespace ChatRoom
             InitializeComponent();
         }
 
+        //Bouton "Leave" pour quitter la discussion
         private void button1_Click(object sender, EventArgs e)
         {
             MessageController.Send("a quitté la discussion.", this.username);
@@ -28,15 +29,7 @@ namespace ChatRoom
             form.Show();
         }
 
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //Fonction pour rafraichir les messages
         public void RefreshMessages()
         {
             this.listView1.Items.Clear();
@@ -59,6 +52,7 @@ namespace ChatRoom
             this.listView1.Items[listView1.Items.Count -1].EnsureVisible();
         }
 
+        //Fonction pour rafraichir les personnes connectees
         public void RefreshActiveList()
         {
             string result = "\n";
@@ -70,10 +64,10 @@ namespace ChatRoom
             if (!result.Equals(this.activeLabel.Text)) this.activeLabel.Text = result;
         }
 
+        //timer
         private void timer1_Tick(object sender, EventArgs e)
         {
             this.RefreshActiveList();
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -83,6 +77,7 @@ namespace ChatRoom
             this.RefreshMessages();
         }
 
+        //Chargement du form
         private void Room_Load(object sender, EventArgs e)
         {
             this.RefreshActiveList();

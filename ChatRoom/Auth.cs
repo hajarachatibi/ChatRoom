@@ -18,32 +18,17 @@ namespace ChatRoom
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             var username = this.textBox1.Text;
-            // Check if username exists
-            // If Yes, make it active
-            // If not add it and make it active
+            // verifier si le nom d'utilisateur deja existe
+            // Si oui, on le rend active
+            // Sinon, on l'ajoute et on le met active
             UserController.Join(username);
             MessageController.Send("a rejoint la discussion.", username);
             this.Hide();
             var Room = new Room(username);
             Room.Show();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -5,9 +5,12 @@ using System.Windows.Forms;
 
 namespace ChatRoom
 {
+    //Classe MessageController pour CRUD de la classe Message
     class MessageController
     {
         private static MySqlCommand cmd;
+
+        //Fonction pour l'envoi d'un message
         public static void Send(string message, string username)
         {
 
@@ -22,6 +25,7 @@ namespace ChatRoom
             }
         }
 
+        //Fonction pour lister tous les messages
         public static List<Message> getMessages()
         {
             
