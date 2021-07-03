@@ -35,6 +35,7 @@ namespace ChatRoom
             // If Yes, make it active
             // If not add it and make it active
             UserController.Join(username);
+            MessageController.Send("a rejoint la discussion.", username);
             this.Hide();
             var Room = new Room(username);
             Room.Show();

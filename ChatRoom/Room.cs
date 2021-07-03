@@ -21,6 +21,7 @@ namespace ChatRoom
 
         private void button1_Click(object sender, EventArgs e)
         {
+            MessageController.Send("a quitté la discussion.", this.username);
             UserController.Leave(this.username);
             this.Hide();
             Auth form = new Auth();
@@ -41,16 +42,29 @@ namespace ChatRoom
             this.listView1.Items.Clear();
             foreach (Message message in MessageController.getMessages())
             {
-                this.listView1.Items.Add(new ListViewItem(message.user.username + ":" + message.message));
+                if (message.message == "a quitté la discussion." || message.message == "a rejoint la discussion.")
+                {
+                    var msg = this.listView1.Items.Add(new ListViewItem(message.user.username + " " + message.message + "    " + message.created_at.ToString("dd/MM/yyyy HH:mm:ss")));
+                    msg.BackColor = Color.FromArgb(194, 196, 161);
+                }
+                else
+                {
+                    this.listView1.Items.Add(new ListViewItem(message.user.username + ":" + message.message));
+                    var date = this.listView1.Items.Add(new ListViewItem(message.created_at.ToString("dd/MM/yyyy HH:mm:ss")));
+                    date.ForeColor = Color.Gray;
+                    date.Font = new Font(FontFamily.GenericSansSerif, 7.5F);
+                }
+
             }
+            this.listView1.Items[listView1.Items.Count -1].EnsureVisible();
         }
 
         public void RefreshActiveList()
         {
-            string result = "";
+            string result = "\n";
             foreach (User user in UserController.getActiveUsers())
             {
-                result += user.username + "\n";
+                result += "- " + user.username + "\n \n";
             }
 
             if (!result.Equals(this.activeLabel.Text)) this.activeLabel.Text = result;
@@ -60,7 +74,6 @@ namespace ChatRoom
         {
             this.RefreshActiveList();
 
-            this.RefreshMessages();
         }
 
         private void button2_Click(object sender, EventArgs e)
