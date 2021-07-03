@@ -88,7 +88,6 @@ namespace ChatRoom
             this.splitContainer1.Panel2.Controls.Add(this.listView1);
             this.splitContainer1.Panel2.Controls.Add(this.richTextBox1);
             this.splitContainer1.Panel2.Controls.Add(this.button2);
-            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(1063, 475);
             this.splitContainer1.SplitterDistance = 353;
             this.splitContainer1.SplitterWidth = 5;
@@ -104,7 +103,6 @@ namespace ChatRoom
             this.activeLabel.Name = "activeLabel";
             this.activeLabel.Size = new System.Drawing.Size(0, 18);
             this.activeLabel.TabIndex = 1;
-            this.activeLabel.Click += new System.EventHandler(this.label3_Click);
             // 
             // listView1
             // 
